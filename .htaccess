@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+
+RewriteEngine on
+RewriteBase /aasfatour/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|robots\.txt)
+
+RewriteRule ^(.*)$ index.php?/$1 [L]
+#http://www.monitis.com/blog/codeigniter-security-tips/
+RewriteCond $1 !^(index\.php|img|robots\.txt)
